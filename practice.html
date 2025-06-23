@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <style>
+        
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h1 id="hedding">Hellow world</h1>
+    <p id="para">Hello</p>
+
+    <button id="hide">Hide</button><br><br>
+    <button id="show">Show</button><br><br>
+    <button id="change">Change</button>
+    <button id="name">text</button>
+
+    <script>
+       let name = prompt("ENter your name")
+
+       if(name == ""){
+        alert("Enter valid name")
+       }
+       else if(name !== "" && name.includes("a")){
+        alert(`Hello ${name}`)
+        alert('You have an a')
+       }
+       else{
+        alert("error")
+       }
+
+        $('#hide').click(function(){
+            $('#hedding').hide();
+        });
+
+        $('#show').click(function(){
+            $('#hedding').show();
+        });
+
+        $('#para').mouseover(function(){
+            $('#para').css('color','blue');
+        });
+
+        $('#para').mouseout(function(){
+            $('#para').css('color','black');
+        });
+
+        $('#change').click(function(){
+            $('#para').css('color','red');
+        });
+
+        $('#name').click(function(){
+            $('#hedding').text('New Text');
+        });
+
+    </script>
+</body>
+</html>
